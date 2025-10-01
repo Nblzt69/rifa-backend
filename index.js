@@ -11,6 +11,7 @@ app.use(cors({
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
+app.use(express.json());
 
 const MP_TOKEN = process.env.MERCADO_PAGO_TOKEN;
 
@@ -81,6 +82,7 @@ const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log("Servidor backend rodando na porta " + PORT);
 });
+
 
 
 
