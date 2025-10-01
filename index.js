@@ -6,9 +6,10 @@ const dotenv = require("dotenv");
 const { randomUUID } = require('crypto');
 dotenv.config();
 
-const app = express();
 app.use(cors({
-  origin: "https://nblzt69.github.io/sorte-premium/", 
+  origin: "https://nblzt69.github.io/sorte-premium/", // seu frontend
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 app.use(express.json());
 
@@ -81,5 +82,6 @@ const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log("Servidor backend rodando na porta " + PORT);
 });
+
 
 
