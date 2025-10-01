@@ -6,11 +6,8 @@ const dotenv = require("dotenv");
 const { randomUUID } = require('crypto');
 dotenv.config();
 
-app.use(cors({
-  origin: "https://nblzt69.github.io/sorte-premium/", // seu frontend
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
+const app = express();
+app.use(cors());
 app.use(express.json());
 
 const MP_TOKEN = process.env.MERCADO_PAGO_TOKEN;
