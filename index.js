@@ -8,7 +8,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: "https://SEU-FRONTEND-HOSPEDADO", // exemplo: https://minharifa.netlify.app
+  origin: "https://nblzt69.github.io/sorte-premium/", 
 }));
 app.use(express.json());
 
@@ -81,4 +81,5 @@ const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log("Servidor backend rodando na porta " + PORT);
 });
+
 
